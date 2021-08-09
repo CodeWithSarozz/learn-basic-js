@@ -31,6 +31,8 @@
 // let result = `${fname} ${lname} is ${age} years old.`;
 // alert(result);
 
+//--------------------------------------------------------------------
+
 /*v2.1 DEFAULT PARAMETERS */
 // function welcome(user = "Mystery Person", message = "Good Day") {
 //     alert(`Hello ${user} !! ${message}`)
@@ -38,6 +40,8 @@
 
 // welcome('Saroj', 'Good Morning');
 // welcome();
+
+//--------------------------------------------------------------------
 
 /* v3.1 ARROW FUNCTIONS */
 //normal function
@@ -73,19 +77,50 @@
 
 // console.log(this);
 
-let nepal = {
-    //add property
-    mountains: ['Everest', 'Fish Tail', 'Annapurna'],
+// let nepal = {
+//     //add property
+//     mountains: ['Everest', 'Fish Tail', 'Annapurna'],
 
-    //add method
-    printWithDash: function() {
-        // console.log('inside printWithDash', this);
-        setTimeout(() =>  
-            // console.log('inside setTimeout', this);
-            console.log(this.mountains.join(" - "))
-        , 3000)
-    }
-}
+//     //add method
+//     printWithDash: function() {
+//         // console.log('inside printWithDash', this);
+//         setTimeout(() =>  
+//             // console.log('inside setTimeout', this);
+//             console.log(this.mountains.join(" - "))
+//         , 3000)
+//     }
+// }
 
 // alert(nepal.mountains);
-nepal.printWithDash();
+// nepal.printWithDash();
+
+//--------------------------------------------------------------------
+
+/* v4.0 DESTRUCTURING OBJECTS */
+// let thingsToDo = {
+//     morning: "Exercise",
+//     afternoon: "Work",
+//     evening: "Code",
+//     night: ["Sleep", "Dream"]
+// };
+
+// let {morning, afternoon} = thingsToDo;
+// morning = "Run";
+// console.log(`${morning} - ${afternoon}`);
+
+//function argument
+
+// let uniStudent = (student) => {
+//     let {name, university} = student;
+//     console.log(`${name} from ${university}`);
+// }
+
+// let uniStudent = (name, university) => {
+//     console.log(`${name} from ${university}`);
+// }
+
+// uniStudent({
+//     name: 'Saroj Shrestha',
+//     university: 'British College'
+// });
+
