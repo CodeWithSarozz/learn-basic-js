@@ -137,11 +137,39 @@
 // }
 
 // var adventureClimbing = {name, height, output};
-var adventureClimbing = {
-    name: 'Everest',
-    height: 8848,
-    output() {
-        console.log(`Mt.${this.name} is ${this.height}m tall`);
-    }
-};
-adventureClimbing.output();
+// var adventureClimbing = {
+//     name: 'Everest',
+//     height: 8848,
+//     output() {
+//         console.log(`Mt.${this.name} is ${this.height}m tall`);
+//     }
+// };
+// adventureClimbing.output();
+
+//--------------------------------------------------------------------
+
+/* v5.0 SPREAD OPERATORS */
+// var mountains = ['Everest', 'Fishtail', 'Annapurna'];
+// var mountainsFromJapan = ['Fuji'];
+
+// var allMountains = [...mountains,...mountainsFromJapan];
+// console.log(allMountains);
+
+//OBJECT
+// var day = {
+//     breakfast: 'toast with milk',
+//     launch: 'rice with chicken curry'
+// };
+
+// var night = {
+//     dinner: 'noodle soup'
+// };
+
+// var picnic = {...day, ...night}
+// console.log(picnic);
+
+//rest
+var rivers = ['Sunkoshi', 'Tamakoshi', 'Saptakoshi'];
+var [first, ...rest] = rivers;
+
+console.log(rest);
