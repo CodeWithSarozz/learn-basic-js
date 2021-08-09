@@ -169,7 +169,58 @@
 // console.log(picnic);
 
 //rest
-var rivers = ['Sunkoshi', 'Tamakoshi', 'Saptakoshi'];
-var [first, ...rest] = rivers;
+// var rivers = ['Sunkoshi', 'Tamakoshi', 'Saptakoshi'];
+// var [first, ...rest] = rivers;
 
-console.log(rest);
+// console.log(rest);
+
+/* v6.0 Class constructor and super */
+
+// function holiday(destination, days) {
+//     this.destination = destination
+//     this.days = days
+// }
+
+// holiday.prototype.info = function() {
+//     console.log(this.destination + " | " + this.days + " days");
+// }
+
+// var nepal = new holiday("Nepal", 30)
+
+// nepal.info();
+
+//SUPER OR PARENT CLASS
+class Holiday {
+    constructor(destination, days) {
+        this.destination = destination
+        this.days = days
+    }
+
+    info() {
+        console.log(`${this.destination} will take ${this.days} days.`);
+    }
+}
+
+// console.log(Holiday.prototype);
+
+// const trip = new Holiday('Nepal', 30);
+// trip.info();
+
+//v6.1 extend class
+
+//CHILD OR SUB CLASS
+class Expedition extends Holiday {
+    constructor(destination, days, gear) {
+        super(destination, days);
+        this.gear = gear;
+    }
+
+    info() {
+        super.info();
+        console.log(`Bring your ${this.gear.join(" and your ")}`);
+    }
+}
+
+const tripWithGear = new Expedition("Everest", 30, ["Sunglasses", "Flags", "Camera"]);
+
+tripWithGear.info();
