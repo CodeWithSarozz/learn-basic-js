@@ -52,16 +52,40 @@
 // greeting("Good");
 
 //arrow function with multiple code
-let createBlog = (title, body) => {
-    if (!title) {
-        throw new Error("A title is required");
+// let createBlog = (title, body) => {
+//     if (!title) {
+//         throw new Error("A title is required");
+//     }
+
+//     if (!body) {
+//         throw new Error("A Body can't be empty");
+//     }
+
+//     return alert(`${title} - ${body}`);
+// };
+
+// createBlog('Blog Title', 'This is blog body');
+
+//v3.2 THIS KEYWORD
+// function sayHi() {
+
+// }
+
+// console.log(this);
+
+let nepal = {
+    //add property
+    mountains: ['Everest', 'Fish Tail', 'Annapurna'],
+
+    //add method
+    printWithDash: function() {
+        // console.log('inside printWithDash', this);
+        setTimeout(() =>  
+            // console.log('inside setTimeout', this);
+            console.log(this.mountains.join(" - "))
+        , 3000)
     }
+}
 
-    if (!body) {
-        throw new Error("A Body can't be empty");
-    }
-
-    return alert(`${title} - ${body}`);
-};
-
-createBlog('Blog Title', 'This is blog body');
+// alert(nepal.mountains);
+nepal.printWithDash();
