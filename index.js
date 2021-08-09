@@ -18,9 +18,9 @@
 // alert(let_name); //doesn't alert (*Uncaught ReferenceError: let_name is not defined)
 
 /* v1.1 TEMPLATE STRING (added in ES) */
-let fname = 'Saroj';
-let lname = 'Shrestha';
-let age = prompt("Guess Ryan's age... ");
+// let fname = 'Saroj';
+// let lname = 'Shrestha';
+// let age = prompt("Guess Ryan's age... ");
 
 //old way
 // let result = fname + ' ' + lname + ' is ' + age + ' years old.';
@@ -28,5 +28,13 @@ let age = prompt("Guess Ryan's age... ");
 
 //using tempalte string;
 
-let result = `${fname} ${lname} is ${age} years old.`;
-alert(result);
+// let result = `${fname} ${lname} is ${age} years old.`;
+// alert(result);
+
+/*v2.1 DEFAULT PARAMETERS */
+function welcome(user = "Mystery Person", message = "Good Day") {
+    alert(`Hello ${user} !! ${message}`)
+}
+
+// welcome('Saroj', 'Good Morning');
+welcome();
