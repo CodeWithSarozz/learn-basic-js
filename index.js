@@ -124,3 +124,24 @@
 //     university: 'British College'
 // });
 
+//v4.2 DESTRUCTING ARRAY
+// let [firstMountain] = ['Everest', 'Fishtail', 'Annapurna'];
+
+// console.log(firstMountain);
+
+//v4.3 RESTURING OBJECT
+// var name = 'Everest';
+// var height = 8848;
+// var output = () => {
+//     console.log(`Mt.${this.name} is ${this.height}m tall`);
+// }
+
+// var adventureClimbing = {name, height, output};
+var adventureClimbing = {
+    name: 'Everest',
+    height: 8848,
+    output() {
+        console.log(`Mt.${this.name} is ${this.height}m tall`);
+    }
+};
+adventureClimbing.output();
