@@ -32,9 +32,36 @@
 // alert(result);
 
 /*v2.1 DEFAULT PARAMETERS */
-function welcome(user = "Mystery Person", message = "Good Day") {
-    alert(`Hello ${user} !! ${message}`)
-}
+// function welcome(user = "Mystery Person", message = "Good Day") {
+//     alert(`Hello ${user} !! ${message}`)
+// }
 
 // welcome('Saroj', 'Good Morning');
-welcome();
+// welcome();
+
+/* v3.1 ARROW FUNCTIONS */
+//normal function
+
+// function greeting(message) {
+//     return alert(`${message} everyone!`);
+// }
+
+//arrow function
+// let greeting = message => alert(`${message} everyone!`);
+
+// greeting("Good");
+
+//arrow function with multiple code
+let createBlog = (title, body) => {
+    if (!title) {
+        throw new Error("A title is required");
+    }
+
+    if (!body) {
+        throw new Error("A Body can't be empty");
+    }
+
+    return alert(`${title} - ${body}`);
+};
+
+createBlog('Blog Title', 'This is blog body');
